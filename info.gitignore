@@ -1,0 +1,64 @@
+🛒 Core Shop Features
+ Product grid (all clothes displayed properly)
+ Product cards (image, name, price, button)
+ Add to cart button for each product
+ Cart sidebar / cart page
+ Cart quantity system (+ / - items)
+ Remove item from cart
+ Total price calculation
+
+
+🔍 Search & Filtering
+ Search bar (filter products by name)
+ Category filters (e.g. hoodies, pants, shoes)
+ Price sorting (low → high / high → low)
+ Reset filters button
+
+
+🎨 UI / Design System
+ New color palette (consistent theme)
+ Improved product card design
+ Hover animations on products/buttons
+ Responsive layout (mobile + desktop)
+ Clean spacing + typography system
+
+
+🧠 App Logic Improvements
+ Products stored in an array (data-driven UI)
+ Render function (UI generated from data)
+ Event delegation (one click handler system)
+ Dataset usage for product IDs
+ LocalStorage for cart saving 
+
+🔐 Login System (fake frontend auth)
+ Login page UI
+ "Fake login" (store user in localStorage)
+ Show username when logged in
+ Logout button
+
+
+💳 Checkout (simple version)
+ Checkout button in cart
+ Checkout summary page/modal
+ Clear cart after checkout
+ Order confirmation message
+
+
+🚀 Optional “Flex” Features (if you finish early)
+ Wishlist (save items)
+ Recently viewed products
+ Product animations (fade-in / slide)
+ Dark mode toggle
+ Loading animation when rendering products
+ 
+🧠 How to use this
+
+Don’t try to build randomly. Go in this order:
+
+Products + render system
+Cart logic
+Search/filter
+UI polish
+Login
+Checkout
+Extras

@@ -4,11 +4,11 @@ const rightArrow = document.getElementById("right-arrow");
 const heroImage = document.querySelector(".hero-container img");
 
 let images = [
-    "./assets/images/lamine-yamal-wearing-f50-pink.jpg",
-    "./assets/images/lamine-yamal-smiling-with-red-shades-pink-room.jpg",
-    "./assets/images/lamine-yamal-juggling-ball-with-pink-f50.jpg",
-    "./assets/images/lamine-yamal-pink-f50.avif",
-    "./assets/images/lamine-yamal-pink-f50-above-view.avif"
+    "assets/images/lamine-yamal-wearing-f50-pink.jpg",
+    "assets/images/lamine-yamal-smiling-with-red-shades-pink-room.jpg",
+    "assets/images/lamine-yamal-juggling-ball-with-pink-f50.jpg",
+    "assets/images/lamine-yamal-pink-f50.avif",
+    "assets/images/lamine-yamal-pink-f50-above-view.avif"
 ];
 
 let currentIndex = 0;

@@ -125,6 +125,13 @@ body{
 
 /*-----------------------Slider for the image lsiding aka pictures that are in the hero section---------------------------------------------*/
 
+ .hero-container img{
+    width: 100%;
+    height: 120vh;
+    transition: 0.2s ease ease-out;
+}
+
+
 
 
 
@@ -210,7 +217,7 @@ body{
 }
 
 .duo-hero .hero-card-3{
-    background: url(/assets/images/lamine\ yamal\ juggling\ ball\ with\ pink\ f50.jpg) no-repeat;
+    background: url(/assets/images/lamine-yamal-juggling-ball-with-pink-f50.jpg) no-repeat;
     background-size: cover;
     height: 400px;
     width: 100%;

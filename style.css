@@ -78,6 +78,7 @@ body{
     border: none;
     cursor: pointer;
     border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
 .main-hero-text p{
@@ -89,7 +90,11 @@ body{
     text-shadow: black 1px 0 10px;
 }
 
-
+.main-hero-text button:hover{
+    background-color: #9a9a9a;
+    color: #ffffff;
+    transform: scale(0.90);
+}
 
 
 
@@ -149,10 +154,10 @@ body{
 .duo-hero{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 400px);
+    grid-template-rows: repeat(2, 500px);
     gap: 20px;
     padding: 20px;
-    margin-top: 100px;
+    margin-top: 200px;
     justify-content: center;
     align-items: center;
 }
@@ -173,9 +178,9 @@ body{
 }
 
 .duo-hero .hero-card-1{
-    background: url(/assets/images/lamine\ yamal\ juggling\ ball\ with\ pink\ f50.jpg) no-repeat;
+    background: url(/assets/images/akward-lamine-yamal-pink-f50.jpg) no-repeat;
     background-size: cover;
-    height: 400px;
+    height: 500px;
     width: 100%;
     position: relative;
 }
@@ -200,9 +205,9 @@ body{
 
 
 .duo-hero .hero-card-2{
-    background: url(/assets/images/lamine\ yamal\ juggling\ ball\ with\ pink\ f50.jpg) no-repeat;
+    background: url(/assets/images/akward-lamine-yamal-pink-f50.jpg) no-repeat;
     background-size: cover;
-    height: 400px;
+    height: 500px;
     width: 100%;
     position: relative;
 }
@@ -226,9 +231,9 @@ body{
 }
 
 .duo-hero .hero-card-3{
-    background: url(/assets/images/lamine-yamal-juggling-ball-with-pink-f50.jpg) no-repeat;
+    background: url(/assets/images/akward-lamine-yamal-pink-f50.jpg) no-repeat;
     background-size: cover;
-    height: 400px;
+    height: 500px;
     width: 100%;
     position: relative;
     
@@ -253,9 +258,9 @@ body{
 }
 
 .duo-hero .hero-card-4{
-    background: url(/assets/images/lamine\ yamal\ juggling\ ball\ with\ pink\ f50.jpg) no-repeat;
+    background: url(/assets/images/akward-lamine-yamal-pink-f50.jpg) no-repeat;
     background-size: cover;
-    height: 400px;
+    height: 500px;
     width: 100%;
     position: relative;
     
@@ -280,6 +285,69 @@ body{
 }
 
 .duo-hero button:hover{
-    background-color: #000;
-    color: #fff;
+    background-color: #9a9a9a;
+    color: #ffffff;
+    transform: scale(0.90);
+}
+
+
+/*---------------------------------------------Story section---------------------------------------*/
+
+
+.story {
+    padding: 100px 50px;
+    margin-top: 50px;
+}
+
+.story h1 {
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 240px;
+}
+
+.story-content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+    
+}
+
+
+.middle-image {
+    flex: 1;
+    min-height: 500px;
+    overflow: hidden; 
+}
+
+.middle-image img {
+    width: 60%;
+    height: 30%;
+    margin-left: 200px;
+}
+
+
+.stories {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.top-story,
+.bottom-story {
+    border: 1px solid black;
+    padding: 35px;
+}
+
+/*---------------------------------------------Linebreaks---------------------------------------------*/
+
+#line-break{
+    height: 2px;
+    background: black;
+    margin-top: 100px;
 }

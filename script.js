@@ -55,7 +55,6 @@ const leftArrow = document.getElementById("left-arrow");
 const rightArrow = document.getElementById("right-arrow");
 const heroImage = document.getElementById("hero-image");
 
-
 setInterval(() => {
     currentIndex = (currentIndex + 1) % images.length;
     heroImage.src = images[currentIndex];
@@ -93,4 +92,5 @@ leftArrow.addEventListener("click", function () {
 
 // Show first image on load
 showSlide(currentIndex);
+
 

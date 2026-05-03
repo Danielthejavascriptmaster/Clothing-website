@@ -93,4 +93,32 @@ leftArrow.addEventListener("click", function () {
 // Show first image on load
 showSlide(currentIndex);
 
+//!-----------------------------------------Carousel section------------------------------------------
+
+const carousel = document.querySelector(".carousel")
+const cards = document.querySelectorAll(".product-card");
+
+let cardWidth = 300;
+let index = 0;
+
+document.getElementById("rightBtn").addEventListener("click", function(){
+    index++;
+
+    if(index < 0){
+        index = cards.length -4;
+    }
+
+    carousel.style.transform = `translateX(${-index * cardWidth}px)`;
+});
+
+document.getElementById("leftBtn").addEventListener("click", function(){
+    index--;
+
+    if(index > cards.length - 4){
+        index = 0;
+    }
+
+    carousel.style.transform = `translateX(${-index * cardWidth}px)`;
+})
+
 

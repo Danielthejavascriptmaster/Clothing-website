@@ -358,7 +358,8 @@ body{
 
 
 .story-reverse {
-    padding: 50px;
+    padding: 60px;
+    
     background: #e9e9e9;
     border-radius: 20px;
     margin-top: 80px;
@@ -395,3 +396,80 @@ body{
 
 /*---------------------------------------------Product carousal-----------------------------------------------------*/
 
+.carousel {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;        
+    gap: 16px;               
+    padding: 10px;
+
+    scroll-snap-type: x mandatory; 
+    margin-bottom: 100px;
+    margin-left: 20px;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none; 
+}
+
+.product-card {
+    position: relative;
+    flex: 0 0 auto;          
+    scroll-snap-align: start;
+
+    background: grey;
+    border-radius: 10px;
+    overflow: hidden;   
+    
+}
+
+.product-card img {
+    width: 300px;
+    height: 300px;
+    display: block;
+    border-radius: 10px;
+}
+
+.product-card button {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 10px 16px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+}
+
+.buttons{
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.buttons,
+#leftBtn,
+#rightBtn{
+    font-size: 30px;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s ease-out;
+}
+
+
+#leftBtn:hover,
+#rightBtn:hover{
+    transform: translateY(-10px);
+}

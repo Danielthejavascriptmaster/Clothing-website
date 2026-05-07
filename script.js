@@ -98,27 +98,31 @@ showSlide(currentIndex);
 const carousel = document.querySelector(".carousel")
 const cards = document.querySelectorAll(".product-card");
 
-let cardWidth = 300;
+let cardWidth = 290;
 let index = 0;
 
 document.getElementById("rightBtn").addEventListener("click", function(){
     index++;
 
-    if(index < 0){
-        index = cards.length -4;
+    if(index  > 4){
+        index = 0;
     }
 
     carousel.style.transform = `translateX(${-index * cardWidth}px)`;
+
+    console.log(index);
 });
 
 document.getElementById("leftBtn").addEventListener("click", function(){
     index--;
 
-    if(index > cards.length - 4){
+    if(index <= -3){
         index = 0;
     }
 
     carousel.style.transform = `translateX(${-index * cardWidth}px)`;
+
+    console.log(index)
 })
 
 

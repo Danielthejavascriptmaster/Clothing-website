@@ -56,7 +56,6 @@ body{
     top: 0;
 
     height: 100vh;
-    margin-top: 20px;
 
     flex-shrink: 0;
 }
@@ -76,7 +75,7 @@ body{
     letter-spacing: 2px;
     font-weight: 400;
     margin-bottom: 20px;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 .filter-section label{
@@ -126,6 +125,8 @@ body{
     transition: 1s ease;
 }
 
+
+.hero-3,
 .hero-2,
 .hero-1{
     position: relative;
@@ -287,6 +288,7 @@ body{
     padding: 20px 40px;
     transition: all 0.3s ease;
 }
+
 
 
 

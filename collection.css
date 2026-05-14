@@ -15,6 +15,9 @@ body{
     font-style: normal;
 }
 
+/*!---------------------------------------Navbar--------------------------*/
+
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -29,6 +32,59 @@ body{
     z-index: 1000;
 }
 
+.nav-links a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.nav-links a:hover{
+    color: grey;
+    transform: translateY(-2px);
+    text-decoration: underline;
+}
+
+.nav-links{
+    display: flex;
+    gap: 30px;
+}
+
+.search-bar input{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: #f4f4f4;
+    font-size: 16px;
+    width: 200px;
+    transition: 0.2s ease;
+}
+
+.search-bar input:focus{
+    outline: none;
+    background-color: #e0e0e0;
+    width: 250px;
+}
+
+.icons{
+    display: flex;
+    gap: 20px;
+}
+
+.icons p{
+    margin-left: 20px;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.icons p:hover{
+    color: grey;
+    transform: translateY(-2px);
+}
+
 /*!-------------------------------Filter section---------------------------------*/
 /*!------------------------------------------------------------------------------------------------*/
 /*!------------------------------------------------------------------------------------------------*/
@@ -40,78 +96,41 @@ body{
     min-height: 100vh;
 }
 
-.filter-section {
-    width: 200px;
-    min-height: 100vh;
-    background-color: rgb(239, 248, 255);
-    padding: 10px;
+.filters{
+    width: 250px;
+    background-color: #f4f4f4;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+    padding: 20px;
+    border-radius: 10px;
+    padding-bottom: 200px;
+
+    transition: 1s ease;
     position: fixed;
-    left: 0;
-    top: 0;
+    max-height: 700px;
 
-    height: 100vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
 
-    flex-shrink: 0;
+.filter-item{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-bottom: 1px solid grey;
+    padding: 10px 30px;
+    padding-bottom: 10px;
+}
+
+.filter-content{
+    margin-top: 10px;
+    display: none; 
+    flex-direction: column;
+    gap: 10px;
 }
 
 .row{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-size: 20px;
-    justify-content:center;
-    padding-left: 20px;
-}
-
-.filter-section h3{
-    font-size: 40px;
-    text-align: center;
-    letter-spacing: 2px;
-    font-weight: 400;
-    margin-bottom: 20px;
-    padding-top: 20px;
-}
-
-.filter-section label{
-    letter-spacing: 1px;
-    align-items: center;
-    justify-content: center;
-}
-
-.filter-section input[type="checkbox"]{
-    margin-right: 10px;
-    transform: scale(1.2);
-    text-align: center;
-    justify-content: center;
-}
-
-#filter-close-btn{
-    padding: 5px 10px;
-    border-radius: 50%;
-    margin-left: 100px;
-    color: white;
-    background-color: red;
-    transition: 0.25s ease;
-    margin-top: 90px;
-}
-
-#filter-close-btn:hover{
-    background-color: darkred;
-    transform: translateY(-2px);
-}
-
-.hide-filter .filter-section {
-    display: none;
-}
-
-.hide-filter .product-section {
-    flex: 1;
+    margin-top: 150px;
+    margin-left: 30px;
 }
 
 /*!-------------------------------------------Hero section----------------------------------------*/
@@ -120,9 +139,9 @@ body{
 
 .product-section{
     flex: 1;
-    margin-left: 220px;
     margin-top: 120px;
     transition: 1s ease;
+    margin-left: 220px;
 }
 
 
@@ -270,7 +289,7 @@ body{
 
 .products:hover{
     transform: translateY(-5px);
-    box-shadow: 0 4px 20px black;
+    box-shadow: 0 3px 10px black;
 }
 
 .product-rating{

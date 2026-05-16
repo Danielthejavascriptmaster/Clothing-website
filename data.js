@@ -1,5 +1,5 @@
 const f50ColorWays = [
-    {
+                        {
                             colorWay: "Born For Goals",
                             color:["lime", "black", "white"],
                             hex: ["#d2ff5f", "#000000", "#ffffff"],
@@ -43,6 +43,53 @@ const f50ColorWays = [
 ]
 
 
+const mercurialColorWays = [
+    {
+        colorWay: "United-silt",
+        color: ["black", "pink", "lightblue"],
+        hex: ["#000000", "#ff69b4", "#89cff0"],
+        image: ""
+    },
+
+    {
+        colorWay: "Mad ambition",
+        color: ["blue", "lightblue"],
+        hex: ["#0000ff", "#89cff0"],
+        image:"",
+    },
+
+    {
+        colorWay: "Shadow",
+        color: ["black", "darkblue"],
+        hex: ["#000000", "#00008b"],
+        image:"",
+    },
+
+    {
+        colorWay: "Prism Ocean",
+        color: ["lightblue", "pink"],
+        hex: ["#89cff0", "#ff69b4"],
+        image:"",
+    },
+
+    {
+        colorWay: "Fear Nothing",
+        color: ["white", "black", "red"],
+        hex: ["#ffffff", "#000000", "#ff0000"],
+        image:"",
+    },
+]
+
+const mercurialSuperfly10ColorWays = [
+    {
+        colorWay: "Light-Laser",
+        color: ["black", "yellow", "red"],
+        hex: ["#000000", "#ffff00", "#ff0000"],
+        image:"",
+    }
+]
+
+
 const products = [
     
     {
@@ -76,8 +123,47 @@ const products = [
                 colorWays: f50ColorWays
             },
 
+
+
         ],
     },
+
+    {
+        id: 2,
+        name: "Nike Mercurial",
+        brand: "Nike",
+        category: "cleats",
+        versions: [
+
+            {
+                name: "Mercurial elite",
+                price: 250,
+                laceless: false,
+                studTypes: ["FG", "AG", "SG"],
+                colorWays: mercurialColorWays,
+            }
+        ],
+    },
+
+    {
+        id: 3,
+        name: "Mercural superfly 10",
+        brand: "Nike",
+        category: "cleats",
+        versions: [
+            {
+                name:"Mercurial Superfly 10 elite",
+                price: 300,
+                laceless: false,
+                studTypes: ["FG", "AG", "SG"],
+                colorWays: mercurialSuperfly10ColorWays,
+
+            }
+
+
+        ]
+
+    }
 ];
 
 

@@ -133,6 +133,29 @@ body{
     margin-left: 30px;
 }
 
+#close-button{
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#open-button{
+    position: fixed;
+    top: 100px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
 /*!-------------------------------------------Hero section----------------------------------------*/
 /*!------------------------------------------------------------------------------------------------*/
 /*!------------------------------------------------------------------------------------------------*/

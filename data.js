@@ -1,49 +1,111 @@
 const f50ColorWays = [
-                        {
-                            colorWay: "Born For Goals",
-                            color:["lime", "black", "white"],
-                            hex: ["#d2ff5f", "#000000", "#ffffff"],
-                            image: "assets/images/f50-born-for-goals-elite.webp"
-                        },
 
-                        {
-                            colorWay: "Pure Victory",
-                            color: ["white", "red", "lime"],
-                            hex: ["#ffffff", "#ff0000", "#d2ff5f"],
-                            image: "assets/images/f50-pure-victory-elite.webp"
-                        },
+    {
+        colorWay: "Born For Goals",
+        color:["lime", "black", "white"],
+        hex: ["#d2ff5f", "#000000", "#ffffff"],
+        image: "assets/images/f50-born-for-goals-elite.webp"
+    },
 
-                        {
-                            colorWay: "Stealth Victory",
-                            color: ["black", "red", "white", "grey"],
-                            hex: ["#000000", "#ff0000", "#ffffff", "#808080"],
-                            image: "assets/images/f50-stealth-victory-elite.webp"
-                        },
+    {
+        colorWay: "Pure Victory",
+        color: ["white", "red", "lime"],
+        hex: ["#ffffff", "#ff0000", "#d2ff5f"],
+        image: "assets/images/f50-pure-victory-elite.webp"
+    },
 
-                        {
-                            colorWay: "Coral blaze",
-                            color: ["blue", "coral", "white"],
-                            hex: ["#0000ff", "#ff7f00", "#ffffff"],
-                            image: "assets/images/f50-coral-blaze-elite.webp"
-                        },
+    {
+        colorWay: "Stealth Victory",
+        color: ["black", "red", "white", "grey"],
+        hex: ["#000000", "#ff0000", "#ffffff", "#808080"],
+        image: "assets/images/f50-stealth-victory-elite.webp"
+    },
 
-                        {
-                            colorWay: "Road To Glory",
-                            color: ["gold", "black", "white", "lavender"],
-                            hex: ["#FFD700", "#000000", "#ffffff", "#d8b9f3"],
-                            image: "assets/images/f50-road-to-glory-elite.webp"
-                        },
+    {
+        colorWay: "Coral blaze",
+        color: ["blue", "coral", "white"],
+        hex: ["#0000ff", "#ff7f00", "#ffffff"],
+        image: "assets/images/f50-coral-blaze-elite.webp"
+    },
 
-                        {
-                            colorWay: "Mystic Glory",
-                            color: ["lime", "pink", "lavender" ],
-                            hex: ["#d2ff5f", "#f300a6", "#d8b9f3"],
-                            image: "assets/images/f50-mystic-glory-elite.webp"
-                        },
+    {
+        colorWay: "Road To Glory",
+        color: ["gold", "black", "white", "lavender"],
+        hex: ["#FFD700", "#000000", "#ffffff", "#d8b9f3"],
+        image: "assets/images/f50-road-to-glory-elite.webp"
+    },
+
+    {
+        colorWay: "Mystic Glory",
+        color: ["lime", "pink", "lavender" ],
+        hex: ["#d2ff5f", "#f300a6", "#d8b9f3"],
+        image: "assets/images/f50-mystic-glory-elite.webp"
+    },
 ]
 
 
+
+const predatorColorWays = [
+
+    {
+        colorWay: "Mystic Victory",
+        color: ["lime", "lavender", "pink"],
+        hex: ["#d2ff5f", "#d8b9f3", "#f300a6"],
+        image: ""
+    },
+
+    {
+        colorWay: "Polar Victory",
+        color : ["white", "blue", "grey"],
+        hex: ["#ffffff", "#0000ff", "#808080"],
+        image: ""
+    },
+
+    {
+        colorWay: "Champagne",
+        color: ["red", "beige", "white", "black"],
+        hex: ["#ff0000", "#f5f5dc", "#ffffff", "#000000"],
+        image: ""
+    },
+
+    {
+        colorWay: "The Football Gal",
+        color: ["red", "lightblue", "white"],
+        hex: ["#ff0000", "#add8e6", "#ffffff"],
+        image: ""
+    },
+
+    {
+        colorWay: "Dark Spark",
+        color: ["black", "grey", "gold"],
+        hex: ["#000000", "#808080", "#daa520"]
+    }
+
+]
+
+
+
+
+
+//!-------------------------------------NIKE section-------------------------------------------
+//!---------------------------------------------------------------------------------------------
+
+const mercurialSuperfly10ColorWays = [
+
+    {
+        colorWay: "Light-Laser",
+        color: ["black", "yellow", "red"],
+        hex: ["#000000", "#ffff00", "#ff0000"],
+        image:""
+    }
+]
+
+
+
+
+
 const mercurialColorWays = [
+
     {
         colorWay: "United-silt",
         color: ["black", "pink", "lightblue"],
@@ -55,39 +117,34 @@ const mercurialColorWays = [
         colorWay: "Mad ambition",
         color: ["blue", "lightblue"],
         hex: ["#0000ff", "#89cff0"],
-        image:"",
+        image:""
     },
 
     {
         colorWay: "Shadow",
         color: ["black", "darkblue"],
         hex: ["#000000", "#00008b"],
-        image:"",
+        image:""
     },
 
     {
         colorWay: "Prism Ocean",
         color: ["lightblue", "pink"],
         hex: ["#89cff0", "#ff69b4"],
-        image:"",
+        image:""
     },
 
     {
         colorWay: "Fear Nothing",
         color: ["white", "black", "red"],
         hex: ["#ffffff", "#000000", "#ff0000"],
-        image:"",
+        image:""
     },
 ]
 
-const mercurialSuperfly10ColorWays = [
-    {
-        colorWay: "Light-Laser",
-        color: ["black", "yellow", "red"],
-        hex: ["#000000", "#ffff00", "#ff0000"],
-        image:"",
-    }
-]
+
+
+//! ACTUAL PRODUCT DATA
 
 
 const products = [
@@ -128,8 +185,25 @@ const products = [
         ],
     },
 
+
     {
         id: 2,
+        name: "Adidas Predator",
+        brand: "Adidas",
+        category: "cleats",
+        versions: [
+            {
+                name: "Predator elite",
+                price: 300,
+                laceless: false,
+                studTypes: ["FG", "AG", "SG"],
+                colorWays: predatorColorWays,
+            }
+        ]
+    },
+
+    {
+        id: 3,
         name: "Nike Mercurial",
         brand: "Nike",
         category: "cleats",
@@ -146,7 +220,7 @@ const products = [
     },
 
     {
-        id: 3,
+        id: 4,
         name: "Mercural superfly 10",
         brand: "Nike",
         category: "cleats",
@@ -164,6 +238,9 @@ const products = [
         ]
 
     }
+
+
+
 ];
 
 

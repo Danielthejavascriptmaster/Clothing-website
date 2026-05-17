@@ -15,6 +15,12 @@ body{
     font-style: normal;
 }
 
+.erica-one-regular {
+  font-family: "Erica One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /*!---------------------------------------Navbar--------------------------*/
 
 
@@ -261,7 +267,8 @@ body{
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    
+    gap: 10px;
     margin-bottom: 100px;
 
     background-color: rgb(233, 233, 233);
@@ -280,25 +287,33 @@ body{
 
 .product-description{
     margin-top: 12px;
+    font-family: "elms-sans-regular", sans-serif;
+    font-size: 14px;
 }
 
 .product-name{
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     color: black;
     margin-bottom: 6px;
+    font-family: erica-one-regular, sans-serif;
+    border-bottom: 1px solid grey;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .product-type{
     font-size: 15px;
     color: grey;
     margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 .product-price{
     font-size: 22px;
-    font-weight: bold;
+    font-weight: 100;
     color: black;
+    margin-top: 20px;
 }
 
 .products{
@@ -334,3 +349,6 @@ body{
 
 
 
+.colors{
+    color: darkgoldenrod;
+}

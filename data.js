@@ -43,8 +43,6 @@ const f50ColorWays = [
     },
 ]
 
-
-
 const predatorColorWays = [
 
     {
@@ -83,12 +81,8 @@ const predatorColorWays = [
 
 ]
 
+//?-------------------------------------NIKE section-------------------------------------------
 
-
-
-
-//!-------------------------------------NIKE section-------------------------------------------
-//!---------------------------------------------------------------------------------------------
 
 const mercurialSuperfly10ColorWays = [
 
@@ -99,10 +93,6 @@ const mercurialSuperfly10ColorWays = [
         image:""
     }
 ]
-
-
-
-
 
 const mercurialColorWays = [
 
@@ -142,12 +132,176 @@ const mercurialColorWays = [
     },
 ]
 
+const airForce1ColorWays = [
+    {
+        color: "black",
+        hex: "#000",
+        image: ""
+    },
+
+    {
+        color: "white",
+        hex: "#fff",
+        image: ""
+    },
+
+    {
+        color: ["white", "black"],
+        hex: ["#fff", "#000"],
+        image: ""
+    }
+]
+
+const jordan1HighColorWays = [
+    {
+        name: "Chicago",
+        color: ["white", "red", "black"],
+        hex: ["#ffffff", "#ff0000", "#000000"],
+        image: ""
+    },
+
+    {
+        name: "Travis Scott",
+        color: ["brown", "black", "white"],
+        hex: ["#3d2605", "#000000", "#ffffff"],
+        image: ""
+    },
+
+    {
+        name: "Dior",
+        color: ["white", "grey", "black"],
+        hex: ["#ffffff", "#808080", "#000000"],
+        image: ""
+    },
+
+    {
+        name: "university blue",
+        color: ["lightblue", "white", "black"],
+        hex: ["#89cff0", "#ffffff", "#000000"],
+        image: ""
+    }
 
 
-//! ACTUAL PRODUCT DATA
+]
 
+const jordan4ColorWays = [
+    {
+        name: "Off white",
+        color: ["beige", "white"],
+        hex: ["#f5f5dc", "#ffffff"],
+        image: ""
+    },
+
+    {
+        name: "Black cat",
+        color: ["black", "white"],
+        hex: ["#000000", "#ffffff"],
+        image: ""
+    },
+
+    {
+        name: "Military Black",
+        color: ["black", "white"],
+        hex: ["#000000", "#ffffff"],
+        image: ""
+    },
+
+    {
+        name: "Ligtning",
+        color: ["yellow", "white", "black"],
+        hex: ["#ffff00", "#ffffff", "#000000"],
+        image: ""
+    },
+
+    {
+        name: "Thunder red",
+        color: ["red", "black"],
+        hex: ["#ff0000", "#000000"],
+        image: ""
+    }
+
+
+]
+
+const jordan11ColorWays = [
+    {
+        name: "Cherry",
+        color: ["red", "white"],
+        hex: ["#ff0000", "#ffffff"],
+        image: ""
+    },
+
+    {
+        name: "Concord",
+        color: ["white", "black", "lightblue"],
+        hex: ["#ffffff", "#000000", "#89cff0"],
+        image: ""
+    },
+
+    {
+        name: "play off bred",
+        color: ["red", "black", "white"],
+        hex: ["#ff0000", "#000000", "#ffffff"],
+        image: ""
+    },
+
+    {
+        name: "gris",
+        color: ["grey", "white"],
+        hex: ["#808080", "#ffffff"],
+        image: ""
+    }
+]
+
+const yeezyColorWays = [
+    {
+        name: "bone",
+        color: ["beige", "white"],
+        hex: ["#f5f5dc"],
+        image: ""
+    },
+
+    {
+        name: "toupe brown",
+        color: ["brown", "white"],
+        hex: ["#654321"],
+        image: ""
+    },
+
+    {
+        name: "black",
+        color: ["black", "white"],
+        hex: ["#000000"],
+        image: ""
+    },
+
+    {
+        name: "orange",
+        color: ["orange"],
+        hex: ["#ffa500"],
+        image: ""
+    },
+
+    {
+        name: "white",
+        color: ["white"],
+        hex: ["#ffffff"],
+        image: ""
+    },
+
+    {
+        name: "lime",
+        color: ["lime"],
+        hex: ["#d2ff5f"],
+        image: ""
+    }
+]
+
+// ACTUAL PRODUCT DATA
 
 const products = [
+
+    //!--------------------ADIDAS section----------------------
     
     {
         id: 1,
@@ -185,7 +339,6 @@ const products = [
         ],
     },
 
-
     {
         id: 2,
         name: "Adidas Predator",
@@ -201,6 +354,8 @@ const products = [
             }
         ]
     },
+
+    //!--------------------NIKE section----------------------
 
     {
         id: 3,
@@ -237,11 +392,45 @@ const products = [
 
         ]
 
+    },
+
+    {
+        id: 5,
+        name: "Air Force 1",
+        brand: "nike",
+        price: 120,
+        category: "sneakers",
+        colorWays: airForce1ColorWays
+    },
+
+    {
+        id: 6,
+        name: "jordan 1 high",
+        price: 100,
+        category: "sneakers",
+        colorWays: jordan1HighColorWays
+    },
+
+    {
+        id: 7,
+        name: "jordan 4",
+        price: 200,
+        category: "sneakers",
+        colorWays: jordan4ColorWays
+    },
+
+    {
+        id: 8,
+        name: "jordan 11",
+        price: 220,
+        category: "sneakers",
+        colorWays: jordan11ColorWays
     }
+
 
 
 
 ];
 
 
-//*!--------------------next sectiond----------------------
+

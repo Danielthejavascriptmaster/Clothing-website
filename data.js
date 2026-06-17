@@ -3,80 +3,80 @@
 const f50ColorWays = [
 
     {
-        colorWay: "Born For Goals",
+        name: "Born For Goals",
         color:["lime", "black", "white"],
         hex: ["#d2ff5f", "#000000", "#ffffff"],
         image: "assets/images/f50-born-for-goals-elite.webp"
     },
 
     {
-        colorWay: "Pure Victory",
+        name: "Pure Victory",
         color: ["white", "red", "lime"],
         hex: ["#ffffff", "#ff0000", "#d2ff5f"],
         image: "assets/images/f50-pure-victory-elite.webp"
     },
 
     {
-        colorWay: "Stealth Victory",
+        name: "Stealth Victory",
         color: ["black", "red", "white", "grey"],
         hex: ["#000000", "#ff0000", "#ffffff", "#808080"],
         image: "assets/images/f50-stealth-victory-elite.webp"
     },
 
     {
-        colorWay: "Coral blaze",
+        name: "Coral blaze",
         color: ["blue", "coral", "white"],
         hex: ["#0000ff", "#ff7f00", "#ffffff"],
         image: "assets/images/f50-coral-blaze-elite.webp"
     },
 
     {
-        colorWay: "Road To Glory",
+        name: "Road To Glory",
         color: ["gold", "black", "white", "lavender"],
         hex: ["#FFD700", "#000000", "#ffffff", "#d8b9f3"],
         image: "assets/images/f50-road-to-glory-elite.webp"
     },
 
     {
-        colorWay: "Mystic Glory",
+        name: "Mystic Glory",
         color: ["lime", "pink", "lavender" ],
         hex: ["#d2ff5f", "#f300a6", "#d8b9f3"],
         image: "assets/images/f50-mystic-glory-elite.webp"
-    },
+    }
 ]
 
 const predatorColorWays = [
 
     {
-        colorWay: "Mystic Victory",
+        name: "Mystic Victory",
         color: ["lime", "lavender", "pink"],
         hex: ["#d2ff5f", "#d8b9f3", "#f300a6"],
         image: ""
     },
 
     {
-        colorWay: "Polar Victory",
+        name: "Polar Victory",
         color : ["white", "blue", "grey"],
         hex: ["#ffffff", "#0000ff", "#808080"],
         image: ""
     },
 
     {
-        colorWay: "Champagne",
+        name: "Champagne",
         color: ["red", "beige", "white", "black"],
         hex: ["#ff0000", "#f5f5dc", "#ffffff", "#000000"],
         image: ""
     },
 
     {
-        colorWay: "The Football Gal",
+        name: "The Football Gal",
         color: ["red", "lightblue", "white"],
         hex: ["#ff0000", "#add8e6", "#ffffff"],
         image: ""
     },
 
     {
-        colorWay: "Dark Spark",
+        name: "Dark Spark",
         color: ["black", "grey", "gold"],
         hex: ["#000000", "#808080", "#daa520"],
         image: ""
@@ -133,7 +133,7 @@ const yeezyColorWays = [
 const mercurialSuperfly10ColorWays = [
 
     {
-        colorWay: "Light-Laser",
+        name: "Light-Laser",
         color: ["black", "yellow", "red"],
         hex: ["#000000", "#ffff00", "#ff0000"],
         image:""
@@ -143,35 +143,35 @@ const mercurialSuperfly10ColorWays = [
 const mercurialColorWays = [
 
     {
-        colorWay: "United-silt",
+        name: "United-silt",
         color: ["black", "pink", "lightblue"],
         hex: ["#000000", "#ff69b4", "#89cff0"],
         image: ""
     },
 
     {
-        colorWay: "Mad ambition",
+        name: "Mad ambition",
         color: ["blue", "lightblue"],
         hex: ["#0000ff", "#89cff0"],
         image:""
     },
 
     {
-        colorWay: "Shadow",
+        name: "Shadow",
         color: ["black", "darkblue"],
         hex: ["#000000", "#00008b"],
         image:""
     },
 
     {
-        colorWay: "Prism Ocean",
+        name: "Prism Ocean",
         color: ["lightblue", "pink"],
         hex: ["#89cff0", "#ff69b4"],
         image:""
     },
 
     {
-        colorWay: "Fear Nothing",
+        name: "Fear Nothing",
         color: ["white", "black", "red"],
         hex: ["#ffffff", "#000000", "#ff0000"],
         image:""
@@ -181,21 +181,22 @@ const mercurialColorWays = [
 const airForce1ColorWays = [
     {
         name: "black",
-        color: "black",
-        hex: "#000",
+        color: ["black"],
+        hex: ["#000000"],
         image: ""
     },
 
     {
         name: "white",
-        color: "white",
-        hex: "#fff",
+        color: ["white"],
+        hex: ["#ffffff"],
         image: ""
     },
 
     {
+        name: "black and white",
         color: ["white", "black"],
-        hex: ["#fff", "#000"],
+        hex: ["#ffffff", "#000000"],
         image: ""
     }
 ]

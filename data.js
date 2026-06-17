@@ -78,7 +78,8 @@ const predatorColorWays = [
     {
         colorWay: "Dark Spark",
         color: ["black", "grey", "gold"],
-        hex: ["#000000", "#808080", "#daa520"]
+        hex: ["#000000", "#808080", "#daa520"],
+        image: ""
     }
 
 ]
@@ -179,12 +180,14 @@ const mercurialColorWays = [
 
 const airForce1ColorWays = [
     {
+        name: "black",
         color: "black",
         hex: "#000",
         image: ""
     },
 
     {
+        name: "white",
         color: "white",
         hex: "#fff",
         image: ""
@@ -936,8 +939,8 @@ const products = [
         id: 22,
         name: "Burberry shorts",
         price: 1500,
-        category: "jackets",
-        colorWays: burberryTrenchCoatColorWays
+        category: "shorts",
+        colorWays: burberryShortsColorWays
     },
 
     {
@@ -1003,6 +1006,7 @@ const products = [
         name: "Supreme shirt",
         price: 500,
         category: "shirts",
+        colorWays: supremeShirtColorWays
         
     }
 ];

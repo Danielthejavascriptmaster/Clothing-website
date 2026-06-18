@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Streetwear Card</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Inter,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#070707;
+    padding:40px;
+}
+
+/* CARD */
+
+.product-card{
+    position:relative;
+
+    width:360px;
+
+    background:#111;
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+    overflow:hidden;
+
+    transition:.45s ease;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.3);
+}
+
+/* GLOW */
+
+.product-card::before{
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    background:#ff77c8;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    opacity:.18;
+
+    top:-100px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    pointer-events:none;
+}
+
+.product-card:hover{
+    transform:
+    translateY(-12px)
+    rotateX(4deg)
+    rotateY(-4deg);
+
+    border-color:
+    rgba(255,255,255,.2);
+}
+
+/* IMAGE */
+
+.image-container{
+    position:relative;
+    aspect-ratio:1/1;
+    overflow:hidden;
+}
+
+.image-container img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:.8s ease;
+}
+
+.product-card:hover img{
+    transform:scale(1.08);
+}
+
+/* SHINE EFFECT */
+
+.image-container::after{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-180%;
+
+    width:50%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.2),
+        transparent
+    );
+
+    transition:1s;
+}
+
+.product-card:hover .image-container::after{
+    left:180%;
+}
+
+/* BADGE */
+
+.badge{
+    position:absolute;
+
+    top:18px;
+    left:18px;
+
+    z-index:20;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:white;
+    color:black;
+
+    font-size:.72rem;
+    font-weight:800;
+
+    letter-spacing:1px;
+}
+
+/* FAVORITE */
+
+.favorite{
+    position:absolute;
+
+    top:18px;
+    right:18px;
+
+    z-index:20;
+
+    width:42px;
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,.12);
+
+    color:rgb(255, 0, 0);
+
+    backdrop-filter:blur(10px);
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size: 40px;
+}
+
+.favorite:hover{
+    background:white;
+    color:black;
+}
+
+/* CONTENT */
+
+.content{
+    padding:22px;
+}
+
+.brand{
+    color:#888;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:.75rem;
+
+    font-weight:700;
+}
+
+.title{
+    margin-top:10px;
+
+    color:white;
+
+    font-size:1.25rem;
+
+    font-weight:700;
+
+    line-height:1.3;
+}
+
+/* COLORS */
+
+.colors{
+    display:flex;
+    gap:10px;
+
+    margin-top:18px;
+}
+
+.colors span{
+    width:16px;
+    height:16px;
+
+    border-radius:50%;
+
+    border:2px solid
+    rgba(255,255,255,.2);
+}
+
+.pink{
+    background:#ff8bcf;
+}
+
+.black{
+    background:#000;
+}
+
+.grey{
+    background:#666;
+}
+
+/* RATING */
+
+.rating{
+    margin-top:18px;
+
+    color:#ffc947;
+
+    font-size:.95rem;
+}
+
+.rating span{
+    color:#888;
+}
+
+/* PRICE */
+
+.price-row{
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:18px;
+}
+
+.price{
+    color:white;
+
+    font-size:1.8rem;
+
+    font-weight:800;
+}
+
+.old-price{
+    color:#666;
+
+    text-decoration:line-through;
+}
+
+/* BUTTON */
+
+.bag-btn{
+    width:100%;
+
+    margin-top:22px;
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:16px;
+
+    font-size:.95rem;
+
+    font-weight:700;
+
+    background:white;
+
+    color:black;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.bag-btn:hover{
+    letter-spacing:1px;
+}
+
+/* STOCK */
+
+.stock{
+    margin-top:12px;
+
+    color:#4ade80;
+
+    font-size:.85rem;
+
+    font-weight:600;
+}
+
+</style>
+</head>
+<body>
+
+<div class="product-card">
+
+    <div class="image-container">
+
+        <span class="badge">
+            LIMITED DROP
+        </span>
+
+        <button class="favorite">
+            ♥
+        </button>
+
+        <img
+        src="/assets/images/hoodies/bape/light-pink-bape-hoodie.jpg"
+        alt="Bape Hoodie">
+
+    </div>
+
+    <div class="content">
+
+        <div class="brand">
+            BAPE
+        </div>
+
+        <h2 class="title">
+            Light Pink Shark Hoodie
+        </h2>
+
+        <div class="colors">
+            <span class="pink"></span>
+            <span class="black"></span>
+            <span class="grey"></span>
+        </div>
+
+        <div class="rating">
+            ★★★★★
+            <span>(128 Reviews)</span>
+        </div>
+
+        <div class="price-row">
+            <div class="price">$149</div>
+            <div class="old-price">$199</div>
+        </div>
+
+        <div class="stock">
+            ✓ Only 4 left in stock
+        </div>
+
+        <button class="bag-btn">
+            ADD TO BAG →
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+</html>

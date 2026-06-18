@@ -1,50 +1,58 @@
-const filterContent = document.querySelector(".filter-content");
-const filterTitle = document.querySelectorAll(".filter-title");
+const ProductWrapper = document.createElement("div");
+ProductWrapper.className = "product-wrapper";
 
-const filterTitles = document.querySelectorAll(".filter-title");
+for(let i = 0; i < products.length; i++){
 
+    const ProductCard = document.createElement("div");
+    ProductCard.className = "products";
 
+    const ProductImage = document.createElement("img");
+    ProductImage.src = products[i].firstImage;
 
-filterTitles.forEach(title => {
-  title.addEventListener("click", () => {
-    
-    const content = title.nextElementSibling;
+    const ProductDescription = document.createElement("div");
+    ProductDescription.className = "product-description";
 
+    const ProductRating = document.createElement("div");
+    ProductRating.className = "product-rating";
+    ProductRating.innerHTML = "★★★★★ <span>(128)</span>";
 
-    if(content.style.display === "flex"){
-        content.style.display = "none"
-    } else{
-        content.style.display = "flex"
-    }
-  });
-});
+    const TopRow = document.createElement("div");
+    TopRow.className = "top-row";
 
+    const ProductName = document.createElement("h2");
+    ProductName.className = "product-name";
+    ProductName.textContent = products[i].name;
 
-const closeButton = document.getElementById("close-button");
-const filter = document.querySelector(".filters");
-const productSection = document.querySelector(".product-section");
-const openButton = document.createElement("button");
+    const ProductPrice = document.createElement("h2");
+    ProductPrice.className = "product-price";
+    ProductPrice.textContent = "£" + products[i].price;
 
-closeButton.addEventListener("click", function(){
-    filter.style.display = "none";
-    productSection.style.marginLeft = "0";
+    const ProductType = document.createElement("h2");
+    ProductType.className = "product-type";
+    ProductType.textContent = products[i].category;
 
-    
+    const AddToCartButton = document.createElement("button");
+    AddToCartButton.id = "add-cart";
 
-    
-    openButton.id = "open-button";
-    openButton.textContent = "☰";
+    const CartIcon = document.createElement("span");
+    CartIcon.className = "material-symbols-outlined";
+    CartIcon.textContent = "add_shopping_cart";
 
-    document.body.appendChild(openButton);
+    AddToCartButton.appendChild(CartIcon);
+    AddToCartButton.append(" Add to Cart");
 
+    TopRow.appendChild(ProductName);
+    TopRow.appendChild(ProductPrice);
 
-    
-    
-})
+    ProductDescription.appendChild(ProductRating);
+    ProductDescription.appendChild(TopRow);
+    ProductDescription.appendChild(ProductType);
+    ProductDescription.appendChild(AddToCartButton);
 
-openButton.addEventListener("click", function(){   
-    filter.style.display = "flex";
-    productSection.style.marginLeft = "250px";
-    openButton.remove();
+    ProductCard.appendChild(ProductImage);
+    ProductCard.appendChild(ProductDescription);
+
+    ProductWrapper.appendChild(ProductCard);
 }
-)
+
+document.querySelector(".product-section").appendChild(ProductWrapper);

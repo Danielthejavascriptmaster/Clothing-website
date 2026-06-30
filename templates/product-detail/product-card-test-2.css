@@ -197,14 +197,15 @@ body{
     color: grey;
 }
 
-.product-facts {
+.product-fact{
     margin-top: 100px;
     display: grid;
     border-top: 1px solid #e8e8e8;
     border-bottom: 1px solid #e8e8e8;
+    grid-template-columns: repeat(3, 1fr);
     background: #fff;
     justify-content: center;
-    
+    width: 00px;
 }
 
 .fact {

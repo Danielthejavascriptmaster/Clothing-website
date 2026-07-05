@@ -56,3 +56,4 @@ for(let i = 0; i < products.length; i++){
 }
 
 document.querySelector(".product-section").appendChild(ProductWrapper);
+

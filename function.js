@@ -53,7 +53,14 @@ for(let i = 0; i < products.length; i++){
     ProductCard.appendChild(ProductDescription);
 
     ProductWrapper.appendChild(ProductCard);
+
+    ProductCard.addEventListener("click", function(){
+        window.location.href = "product-detail.html?id=" + products[i].id;
+    })
+
 }
 
 document.querySelector(".product-section").appendChild(ProductWrapper);
+
+const ProductCard = document.createElement("div");
 

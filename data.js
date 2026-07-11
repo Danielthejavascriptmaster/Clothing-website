@@ -179,9 +179,6 @@ const yeezyColorWays = [
     }
 ]
 
-// NOTE: your tree also has a standalone "white-yeezi-slides.jpg" with no numbered
-// variants (-2/-3/-4). There's no "white" colorway object here — add one later if needed.
-
 const championsleagueBallColorWays = [
 
     {
@@ -205,8 +202,6 @@ const championsleagueBallColorWays = [
     }
 
 ]
-// NOTE: folder was "assets/images/balls/champions-league/" in the old code — your
-// actual tree has it at "assets/images/ball/" (singular, no subfolder). Fixed.
 
 const adidasSocksColorWays = [
 
@@ -230,12 +225,6 @@ const adidasSocksColorWays = [
         fourthImage: "assets/images/socks/black-adidas-socks-4.webp"
     }
 ]
-// NOTE: folder was "assets/images/socks/adidas/" — actual tree has no "adidas"
-// subfolder, files live directly in "assets/images/socks/". Fixed. Also note
-// black's 3rd/4th images are .webp while 1st/2nd are .jpg (that's how your files
-// actually are).
-
-
 
 //?-------------------------------------NIKE section-------------------------------------------
 
@@ -294,8 +283,7 @@ const mercurialColorWays = [
         fourthImage: "assets/images/cleats/nike/nike-air-zoom-mercurial-vapor-16-elite-black-red-white-4.webp"
     },
 ]
-// NOTE: "Fear Nothing" filenames were in the wrong word order (white-black-red vs
-// your actual files which are black-red-white). Fixed.
+
 
 const airForce1ColorWays = [
     {
@@ -328,7 +316,6 @@ const airForce1ColorWays = [
         fourthImage: "assets/images/shoes/nike/white-black-air-force-1-4.webp"
     }
 ]
-// NOTE: "white" Air Force 1 files are actually .png in your folder, not .webp. Fixed.
 
 const jordan1HighColorWays = [
     {
@@ -467,8 +454,6 @@ const jordan11ColorWays = [
         fourthImage: "assets/images/shoes/jordans/grey-white-jordan-11-4.jpg"
     }
 ]
-// NOTE: ALL Jordan 1/4/11 images were referenced as .webp — every single Jordan
-// file in your tree is actually .jpg. Fixed across the board.
 
 const nikeAirMax90ColorWays = [
     
@@ -493,8 +478,6 @@ const nikeAirMax90ColorWays = [
     }
 
 ]
-// NOTE: folder was "air-max-90" (with dashes) — your tree has it as "airmax90"
-// (no dashes). Also files are .jpg, not .webp. Fixed both.
 
 const nikeAirMax95ColorWays = [
 
@@ -529,7 +512,6 @@ const nikeAirMax95ColorWays = [
     },
 
 ]
-// NOTE: same fix as air-max-90 — folder is "airmax95" (no dashes), files are .jpg.
 
 const nikeTNColorWays = [
 
@@ -565,9 +547,6 @@ const nikeTNColorWays = [
 
 
 ]
-// NOTE: all TN files are .jpg not .webp. Also "orange" is actually named
-// "orange-black-nike-tn" in your folder, not "orange-nike-tn". Fixed both.
-
 
 //?-------------------------------------LOUIS VUITTON section------------------------------------------
 
@@ -604,8 +583,7 @@ const louisVuittonCardholderColorWays = [
 
 
 ]
-// NOTE: folder was "accessories/louis-vuitton" — your tree actually has these
-// under "accessories/wallets". Files are also .avif, not .jpg. Fixed both.
+
 
 //?-------------------------------------BURBERRY section-------------------------------------------
 
@@ -621,8 +599,6 @@ const burberryPufferJacketColorWays = [
         fourthImage: "assets/images/jackets/puffer/black-burberry-puffer-4.jpg"
     }
 ]
-// NOTE: quirk in your actual files — the base image is .png but the -2/-3/-4
-// variants are .jpg. Matched exactly to what's in the folder.
 
 //?-------------------------------------MONCLER section-------------------------------------------
 
@@ -637,7 +613,6 @@ const monclerVestColorWays = [
         fourthImage: "assets/images/jackets/vest/black-moncler-vest-4.jpg"
     }
 ]
-// This one was already correct — no changes.
 
 //?-------------------------------------BATHING APE section-------------------------------------------
 
@@ -738,7 +713,11 @@ const products = [
         firstImage: f50ColorWays[0].firstImage,
         badge: "../../assets/images/logos/adidas-logo.webp",
         descriptionHeader: "Born for speed, built for the elite",
-        description: "The Adidas F50 is engineered for players who live for speed. Featuring a ultra-lightweight upper and precision fit, the F50 gives you the edge you need to outpace defenders and finish with power. Designed with Lamine Yamal and the next generation of attackers in mind, this boot combines cutting-edge technology with a sleek silhouette that turns heads on and off the pitch.",
+        description: [
+            "The Adidas F50 is engineered for players who live for speed.",
+            "Featuring a ultra-lightweight upper and precision fit, the F50 gives you the edge you need to outpace defenders and finish with power.",
+            "Designed with Lamine Yamal and the next generation of attackers in mind, this boot combines cutting-edge technology with a sleek silhouette that turns heads on and off the pitch."
+        ],
         quickFact: "The boot of choice for Lamine Yamal — worn in some of the biggest moments in football.",
         features: [
             "Ultra-lightweight SpeedSkin upper",
@@ -768,7 +747,11 @@ const products = [
         firstImage: predatorColorWays[0].firstImage,
         badge: "../../assets/images/logos/adidas-logo.webp",
         descriptionHeader: "Total control. Total domination.",
-        description: "The Adidas Predator is the most iconic control boot ever made. With its signature rubber grip zones on the upper, the Predator gives you unmatched grip on the ball for swerving passes, dipping shots, and pinpoint accuracy. Worn by legends like Zidane, Beckham, and Gerrard — now carried forward by Jude Bellingham — the Predator is the boot for players who dictate the game.",
+        description: [
+            "The Adidas Predator is the most iconic control boot ever made.",
+            "With its signature rubber grip zones on the upper, the Predator gives you unmatched grip on the ball for swerving passes, dipping shots, and pinpoint accuracy.",
+            "Worn by legends like Zidane, Beckham, and Gerrard — now carried forward by Jude Bellingham — the Predator is the boot for players who dictate the game."
+        ],
         quickFact: "The Predator has been worn in more Champions League finals than any other boot.",
         features: [
             "Rubber grip zones for enhanced ball control",
@@ -799,7 +782,11 @@ const products = [
         firstImage: yeezyColorWays[0].firstImage,
         badge: "../../assets/images/logos/adidas-logo.webp",
         descriptionHeader: "Minimal design. Maximum comfort.",
-        description: "The Yeezy Slide redefines what a sandal can be. Crafted from injected EVA foam, the Yeezy Slide delivers an incredibly lightweight and cushioned feel with every step. The minimalist one-piece construction and muted colorways make it one of the most versatile and coveted footwear pieces in streetwear culture. Whether you're at home, at the beach, or running errands, the Yeezy Slide is the effortless choice.",
+        description: [
+            "The Yeezy Slide redefines what a sandal can be. Crafted from injected EVA foam, the Yeezy Slide delivers an incredibly lightweight and cushioned feel with every step.",
+            "The minimalist one-piece construction and muted colorways make it one of the most versatile and coveted footwear pieces in streetwear culture.",
+            "Whether you're at home, at the beach, or running errands, the Yeezy Slide is the effortless choice."
+        ],
         quickFact: "One of the most resold sneaker items in the world — demand always outpaces supply.",
         features: [
             "One-piece injected EVA foam construction",
@@ -828,7 +815,11 @@ const products = [
         firstImage: championsleagueBallColorWays[0].firstImage,
         badge: "../../assets/images/logos/adidas-logo.webp",
         descriptionHeader: "The official match ball of the UEFA Champions League.",
-        description: "The Adidas Champions League Ball is the pinnacle of football design and performance. Engineered with precision, this ball features a thermally bonded surface for optimal flight and control, ensuring that every pass, shot, and touch feels natural. With its iconic star pattern and vibrant colorways, the Champions League Ball is not just a piece of equipment — it's a symbol of football excellence.",
+        description: [
+            "The Adidas Champions League Ball is the pinnacle of football design and performance.",
+            "Engineered with precision, this ball features a thermally bonded surface for optimal flight and control, ensuring that every pass, shot, and touch feels natural.",
+            "With its iconic star pattern and vibrant colorways, the Champions League Ball is not just a piece of equipment — it's a symbol of football excellence."
+        ],
         quickFact: "The Champions League Ball has been used in every UEFA Champions League final since 2000.",
         features: [
             "Thermally bonded surface for consistent flight",
@@ -855,7 +846,11 @@ const products = [
         firstImage: adidasSocksColorWays[0].firstImage,
         badge: "../../assets/images/logos/adidas-logo.webp",
         descriptionHeader: "Comfort and performance for your feet.",
-        description: "These Adidas socks are designed for comfort and performance, making them perfect for everyday wear or sports activities.",
+        description: [
+            "These Adidas socks are designed for comfort",
+            "and performance, making them perfect for",
+            "everyday wear or sports activities."
+        ],
         quickFact: "Adidas socks are engineered with moisture-wicking technology to keep your feet dry and comfortable.",
         features: [
             "Moisture-wicking fabric",
@@ -885,7 +880,11 @@ const products = [
         firstImage: mercurialColorWays[0].firstImage,
         badge: "../../assets/images/logos/nike-logo.webp",
         descriptionHeader: "Speed is everything. The Mercurial delivers.",
-        description: "The Nike Mercurial Vapor is built for one purpose — pure, unfiltered speed. With a lightweight Vaporposite upper that wraps your foot for a second-skin fit, and a dynamic traction plate that propels you forward with every stride, the Mercurial gives attackers the tools they need to leave defenders behind. Worn by Mbappe, Ronaldo, and Salah — the boot of the fastest players on earth.",
+        description: [
+            "The Nike Mercurial Vapor is built for one purpose — pure, unfiltered speed.",
+            "With a lightweight Vaporposite upper that wraps your foot for a second-skin fit, and a dynamic traction plate that propels you forward with every stride, the Mercurial gives attackers the tools they need to leave defenders behind.",
+            "Worn by Mbappe, Ronaldo, and Salah — the boot of the fastest players on earth."
+        ],
         quickFact: "Kylian Mbappe has worn a version of the Mercurial for every goal of his professional career.",
         features: [
             "Vaporposite upper for lightweight fit",
@@ -903,15 +902,7 @@ const products = [
         ],
         sizes: [39, 40, 41, 42, 43, 44, 45, 46],
         productOccasion: ["Match Day", "Training", "Competitive"],
-        versions: [
-            {
-                name: "Mercurial elite",
-                price: 250,
-                laceless: false,
-                studTypes: ["FG", "AG", "SG"],
-                colorWays: mercurialColorWays,
-            }
-        ],
+        colorWays: mercurialColorWays
     },
 
     {
@@ -923,7 +914,11 @@ const products = [
         firstImage: mercurialSuperfly10ColorWays[0].firstImage,
         badge: "../../assets/images/logos/nike-logo.webp",
         descriptionHeader: "The pinnacle of Nike speed technology.",
-        description: "The Nike Mercurial Superfly 10 Elite is the most advanced speed boot Nike has ever created. Building on decades of innovation, the Superfly 10 features an upgraded Vaporposite+ upper with enhanced texture zones for grip and a next-generation traction plate that adapts to your movement for explosive multi-directional speed. The high-cut Dynamic Fit collar wraps the ankle for total lockdown, giving you the confidence to push your limits at the highest level.",
+        description: [
+            "The Nike Mercurial Superfly 10 Elite is the most advanced speed boot Nike has ever created.",
+            "Building on decades of innovation, the Superfly 10 features an upgraded Vaporposite+ upper with enhanced texture zones for grip and a next-generation traction plate that adapts to your movement for explosive multi-directional speed.",
+            "The high-cut Dynamic Fit collar wraps the ankle for total lockdown, giving you the confidence to push your limits at the highest level."
+        ],
         quickFact: "The Superfly 10 was designed with direct input from Kylian Mbappe during his peak years at PSG.",
         features: [
             "Vaporposite+ upper with texture grip zones",
@@ -941,15 +936,8 @@ const products = [
         ],
         sizes: [39, 40, 41, 42, 43, 44, 45, 46],
         productOccasion: ["Match Day", "Competitive"],
-        versions: [
-            {
-                name: "Mercurial Superfly 10 elite",
-                price: 300,
-                laceless: false,
-                studTypes: ["FG", "AG", "SG"],
-                colorWays: mercurialSuperfly10ColorWays,
-            }
-        ]
+        colorWays: mercurialSuperfly10ColorWays
+        
     },
 
     {
@@ -961,7 +949,11 @@ const products = [
         firstImage: airForce1ColorWays[0].firstImage,
         badge: "../../assets/images/logos/nike-logo.webp",
         descriptionHeader: "The sneaker that started it all.",
-        description: "The Nike Air Force 1 is one of the most iconic sneakers ever created. First released in 1982 as a basketball shoe, the AF1 has since become a cultural staple worn by everyone from hip-hop legends to fashion icons. Its clean, versatile silhouette and durable leather upper make it the perfect everyday shoe that works with any outfit. Timeless, comfortable, and always in style — the Air Force 1 is a wardrobe essential.",
+        description: [
+            "The Nike Air Force 1 is one of the most iconic sneakers ever created. First released in 1982 as a basketball shoe, the AF1 has since become a cultural staple worn by everyone from hip-hop legends to fashion icons.",
+            "Its clean, versatile silhouette and durable leather upper make it the perfect everyday shoe that works with any outfit.",
+            "Timeless, comfortable, and always in style — the Air Force 1 is a wardrobe essential."
+        ],
         quickFact: "The Air Force 1 was the first basketball shoe to use Nike Air cushioning technology.",
         features: [
             "Full-grain leather upper",
@@ -991,7 +983,11 @@ const products = [
         firstImage: jordan1HighColorWays[0].firstImage,
         badge: "../../assets/images/logos/jordan-logo.webp",
         descriptionHeader: "The shoe that changed sneaker culture forever.",
-        description: "The Air Jordan 1 High is the sneaker that started a revolution. Designed by Peter Moore for Michael Jordan in 1985, the Jordan 1 was banned by the NBA for its bold colorways — and Nike paid the fines so Jordan could keep wearing them. That rebellious spirit lives on in every pair. With its high-top ankle support, premium leather upper, and iconic Wings logo, the Jordan 1 is the most culturally significant sneaker of all time.",
+        description: [
+            "The Air Jordan 1 High is the sneaker that started a revolution. Designed by Peter Moore for Michael Jordan in 1985, the Jordan 1 was banned by the NBA for its bold colorways — and Nike paid the fines so Jordan could keep wearing them.",
+            "That rebellious spirit lives on in every pair.",
+            "With its high-top ankle support, premium leather upper, and iconic Wings logo, the Jordan 1 is the most culturally significant sneaker of all time."
+        ],
         quickFact: "Nike paid $5,000 per game in NBA fines so Michael Jordan could wear the original Chicago colorway.",
         features: [
             "Premium leather upper",
@@ -1021,7 +1017,11 @@ const products = [
         firstImage: jordan4ColorWays[0].firstImage,
         badge: "../../assets/images/logos/jordan-logo.webp",
         descriptionHeader: "The most coveted Jordan silhouette in streetwear.",
-        description: "The Air Jordan 4 is widely considered the most versatile and sought-after silhouette in the Jordan line. Designed by Tinker Hatfield in 1989, the Jordan 4 introduced the iconic mesh side panels, plastic wing eyelets, and the visible Air unit in the heel. Whether it's the classic Black Cat, the Off-White collaboration, or the Dior partnership — the Jordan 4 has produced some of the most culturally significant sneaker releases of the modern era.",
+        description: [
+            "The Air Jordan 4 is widely considered the most versatile and sought-after silhouette in the Jordan line.",
+            "Designed by Tinker Hatfield in 1989, the Jordan 4 introduced the iconic mesh side panels, plastic wing eyelets, and the visible Air unit in the heel.",
+            "Whether it's the classic Black Cat, the Off-White collaboration, or the Dior partnership — the Jordan 4 has produced some of the most culturally significant sneaker releases of the modern era."
+        ],
         quickFact: "The Dior x Air Jordan 4 had over 5 million applications for just 13,000 pairs.",
         features: [
             "Leather and mesh upper",
@@ -1051,7 +1051,11 @@ const products = [
         firstImage: jordan11ColorWays[0].firstImage,
         badge: "../../assets/images/logos/jordan-logo.webp",
         descriptionHeader: "The sneaker Michael Jordan wore to his sixth championship.",
-        description: "The Air Jordan 11 is Michael Jordan's favourite shoe — and arguably the most elegant basketball sneaker ever designed. Tinker Hatfield drew inspiration from a dress shoe to create the Jordan 11's sleek patent leather mudguard, giving it a formal aesthetic that works equally well on the court and at a black tie event. First worn in the 1995-96 season when Jordan returned from retirement and led the Bulls to a record 72-win season, the Jordan 11 carries the weight of greatness.",
+        description: [
+            "The Air Jordan 11 is Michael Jordan's favourite shoe — and arguably the most elegant basketball sneaker ever designed.",
+            "Tinker Hatfield drew inspiration from a dress shoe to create the Jordan 11's sleek patent leather mudguard, giving it a formal aesthetic that works equally well on the court and at a black tie event.",
+            "First worn in the 1995-96 season when Jordan returned from retirement and led the Bulls to a record 72-win season, the Jordan 11 carries the weight of greatness."
+        ],
         quickFact: "Michael Jordan wore the Jordan 11 Concord to win his sixth NBA championship in 1998.",
         features: [
             "Patent leather mudguard",
@@ -1082,7 +1086,11 @@ const products = [
         firstImage: nikeAirMax90ColorWays[0].firstImage,
         badge: "../../assets/images/logos/nike-logo.webp",
         descriptionHeader: "The iconic sneaker that redefined comfort.",
-        description: "The Nike Air Max 90 is a timeless classic that combines retro design with modern innovation. Featuring the signature Air unit and sleek silhouette, it offers a perfect blend of style and performance. Whether you're hitting the streets or relaxing at home, the Air Max 90 delivers the comfort and durability you expect from Nike.",
+        description: [
+            "The Nike Air Max 90 is a timeless classic that combines retro design with modern innovation.",
+            "Featuring the signature Air unit and sleek silhouette, it offers a perfect blend of style and performance.",
+            "Whether you're hitting the streets or relaxing at home, the Air Max 90 delivers the comfort and durability you expect from Nike."
+        ],
         quickFact: "The Nike Air Max 90 was released in 1990 and became a cultural icon.",
         features: [
             "Iconic Air unit",
@@ -1109,7 +1117,11 @@ const products = [
         firstImage: nikeAirMax95ColorWays[0].firstImage,
         badge: "../../assets/images/logos/nike-logo.webp",
         descriptionHeader: "The iconic sneaker that redefined comfort.",
-        description: "The Nike Air Max 95 is a timeless classic that combines retro design with modern innovation. Featuring the signature Air unit and sleek silhouette, it offers a perfect blend of style and performance. Whether you're hitting the streets or relaxing at home, the Air Max 95 delivers the comfort and durability you expect from Nike.",
+        description: [
+            "The Nike Air Max 95 is a timeless classic that combines retro design with modern innovation.",
+            "Featuring the signature Air unit and sleek silhouette, it offers a perfect blend of style and performance.",
+            "Whether you're hitting the streets or relaxing at home, the Air Max 95 delivers the comfort and durability you expect from Nike."
+        ],
         quickFact: "The Nike Air Max 95 was released in 1995 and became a cultural icon.",
         features: [
             "Iconic Air unit",
@@ -1136,7 +1148,11 @@ const products = [
         firstImage: nikeTNColorWays[0].firstImage,
         badge: "../../assets/images/logos/nike-logo.webp",
         descriptionHeader: "The ultimate in comfort and style.",
-        description: "The Nike TN is a modern take on the classic sneaker, combining comfort with a bold design. Featuring a sleek silhouette and premium materials, it's perfect for those who want to make a statement while staying comfortable.",
+        description: [
+            "The Nike TN is a modern take on the classic sneaker, combining comfort with",
+            "a bold design. Featuring a sleek silhouette and premium materials, it's perfect",
+            "for those who want to make a statement while staying comfortable."
+        ],
         quickFact: "The Nike TN was released in 1997 and became a favorite among streetwear enthusiasts.",
         features: [
             "Sleek silhouette",
@@ -1164,7 +1180,11 @@ const products = [
         firstImage: louisVuittonCardholderColorWays[0].firstImage,
         badge: "../../assets/images/logos/lv-logo.jpg",
         descriptionHeader: "Elegance in every detail.",
-        description: "The Louis Vuitton card holder is a refined accessory that combines functionality with the House's signature aesthetic. Crafted from premium materials, it features the iconic LV monogram or Damier pattern, ensuring it's as stylish as it is practical. Whether you're heading to a business meeting or a casual dinner, this card holder is the perfect complement to your look.",
+        description: [
+            "The Louis Vuitton card holder is a refined accessory that combines functionality with the House's signature aesthetic.",
+            "Crafted from premium materials, it features the iconic LV monogram or Damier pattern, ensuring it's as stylish as it is practical.",
+            "Whether you're heading to a business meeting or a casual dinner, this card holder is the perfect complement to your look."
+        ],
         quickFact: "Louis Vuitton card holders are often made with the same high-quality materials as the brand's signature handbags.",
         features: [
             "Premium leather or fabric construction",
@@ -1193,7 +1213,11 @@ const products = [
         firstImage: burberryPufferJacketColorWays[0].firstImage,
         badge: "../../assets/images/logos/burberry-logo.png",
         descriptionHeader: "British heritage. Built for the coldest days.",
-        description: "The Burberry puffer jacket combines the House's iconic British heritage with modern technical outerwear. The signature Burberry check lining and iconic equestrian knight logo are hidden inside a sleek, premium quilted exterior — a subtle nod to heritage for those who know. Filled with premium down or synthetic insulation, this jacket keeps you warm without sacrificing style, making it the definitive cold-weather luxury outerwear piece.",
+        description: [
+            "The Burberry puffer jacket combines the House's iconic British heritage with modern technical outerwear.",
+            "The signature Burberry check lining and iconic equestrian knight logo are hidden inside a sleek, premium quilted exterior — a subtle nod to heritage for those who know.",
+            "Filled with premium down or synthetic insulation, this jacket keeps you warm without sacrificing style, making it the definitive cold-weather luxury outerwear piece."
+        ],
         quickFact: "Burberry invented gabardine fabric in 1879 — the same breathable, waterproof material used in the original trench coat.",
         features: [
             "Premium down or synthetic fill insulation",
@@ -1224,7 +1248,11 @@ const products = [
         firstImage: monclerVestColorWays[0].firstImage,
         badge: "../../assets/images/logos/moncler-logo.jpg",
         descriptionHeader: "Layering luxury. The Moncler gilet.",
-        description: "The Moncler gilet is the ultimate layering piece for transitional weather. With the same premium goose down fill and water-resistant nylon shell as the full jacket, the gilet keeps your core warm while freeing your arms for movement. Sleek, clean, and effortlessly stylish — layer it over a hoodie or under a longer coat for a look that works from city streets to mountain resorts.",
+        description: [
+            "The Moncler gilet is the ultimate layering piece for transitional weather.",
+            "With the same premium goose down fill and water-resistant nylon shell as the full jacket, the gilet keeps your core warm while freeing your arms for movement.",
+            "Sleek, clean, and effortlessly stylish — layer it over a hoodie or under a longer coat for a look that works from city streets to mountain resorts."
+        ],
         quickFact: "The Moncler gilet became a staple of European football culture in the 2010s, worn by players and managers on the touchline worldwide.",
         features: [
             "Premium goose down fill",
@@ -1255,7 +1283,11 @@ const products = [
         firstImage: bapeHoodieColorWays[0].firstImage,
         badge: "../../assets/images/logos/bape-logo.png",
         descriptionHeader: "Elevate your everyday wardrobe with the Bape Full Zip Hoodie",
-        description: "Elevate your everyday wardrobe with the Bape Full Zip Hoodie, a standout piece that combines premium craftsmanship with iconic streetwear style. Constructed from heavyweight cotton, this hoodie delivers exceptional comfort, warmth, and durability while maintaining a soft feel against the skin. The relaxed fit offers effortless wearability, making it perfect for layering or wearing on its own throughout every season. Designed with attention to detail, it features a smooth full-length metal zipper, an adjustable hood for added coverage, and ribbed cuffs and hem that provide a secure, comfortable fit. The bold graphics create a statement look while preserving the timeless aesthetic that has made this style a favorite among streetwear enthusiasts. Whether you're heading out with friends, traveling, or simply looking for an everyday essential, this hoodie offers the perfect balance of comfort and style. Pair it with jeans, cargo pants, or sweatpants for a versatile outfit that works in any casual setting.",
+        description: [
+            "Elevate your everyday wardrobe with the Bape Full Zip Hoodie, a standout piece that combines premium craftsmanship with iconic streetwear style. Constructed from heavyweight cotton, this hoodie delivers exceptional comfort, warmth, and durability while maintaining a soft feel against the skin. The relaxed fit offers effortless wearability, making it perfect for layering or wearing on its own throughout every season.",
+            "Designed with attention to detail, it features a smooth full-length metal zipper, an adjustable hood for added coverage, and ribbed cuffs and hem that provide a secure, comfortable fit. The bold graphics create a statement look while preserving the timeless aesthetic that has made this style a favorite among streetwear enthusiasts.",
+            "Whether you're heading out with friends, traveling, or simply looking for an everyday essential, this hoodie offers the perfect balance of comfort and style. Pair it with jeans, cargo pants, or sweatpants for a versatile outfit that works in any casual setting."
+        ],
         quickFact: "This is one of the most bought hype-beast pieces across the world.",
         features: [
             "Premium heavyweight cotton construction",
@@ -1289,7 +1321,11 @@ const products = [
         firstImage: corteizShirtColorWays[0].firstImage,
         badge: "../../assets/images/logos/corteiz-logo.webp",
         descriptionHeader: "Urban style meets street credibility.",
-        description: "The Corteiz T-Shirt is a staple in any streetwear enthusiast's collection. With its minimalist design and high-quality materials, it offers the perfect balance of comfort and style. The iconic Corteiz logo is subtly integrated into the design, making it a conversation starter wherever you go.",
+        description: [
+            "The Corteiz T-Shirt is a staple in any streetwear enthusiast's collection.",
+            "With its minimalist design and high-quality materials, it offers the perfect balance of comfort and style.",
+            "The iconic Corteiz logo is subtly integrated into the design, making it a conversation starter wherever you go."
+        ],
         quickFact: "Corteiz T-Shirts are known for their exceptional fit and durability, making them a favorite among collectors.",
         features: [
             "Premium cotton blend",
@@ -1306,6 +1342,9 @@ const products = [
         colorWays: corteizShirtColorWays
     }
 
-
-
 ];
+
+const shippingInfo = {
+    returns: "Shop with confidence knowing you have 30 days to return your order for free. Simply make sure the item is in its original, unused condition with all packaging and tags intact. Returns cannot be accepted for items that have been damaged, altered, or show signs of wear beyond normal inspection.",
+    delivery: "We aim to process and dispatch all orders within 1–2 business days. Once your order has been shipped, you'll receive a confirmation email with tracking information. Delivery times may vary depending on your location and the shipping method selected at checkout. While we strive to ensure timely delivery, delays caused by carriers, customs, or unforeseen circumstances are beyond our control."
+};

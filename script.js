@@ -62,12 +62,12 @@ setInterval(() => {
 
 
 let images = [
-    "assets/images/lamine-yamal-wearing-f50-pink.jpg",
-    "assets/images/lamine-yamal-smiling-with-red-shades-pink-room.jpg",
-    "assets/images/lamine-yamal-foot-on-ball-pink-f50.jpg",
-    "assets/images/akward-lamine-yamal-pink-f50.jpg",
-    "assets/images/lamine-yamal-pink-f50.avif",
-    "assets/images/lamine-yamal-pink-f50-above-view.avif"
+    "../../assets/images/website-images/lamine-yamal-wearing-f50-pink.jpg",
+    "../../assets/images/website-images/lamine-yamal-smiling-with-red-shades-pink-room.jpg",
+    "../../assets/images/website-images/lamine-yamal-foot-on-ball-pink-f50.jpg",
+    "../../assets/images/website-images/akward-lamine-yamal-pink-f50.jpg",
+    "../../assets/images/website-images/lamine-yamal-pink-f50.avif",
+    "../../assets/images/website-images/lamine-yamal-pink-f50-above-view.avif"
 ];
 
 let currentIndex = 0;
@@ -98,7 +98,7 @@ showSlide(currentIndex);
 const carousel = document.querySelector(".carousel")
 const cards = document.querySelectorAll(".product-card");
 
-let cardWidth = 290;
+let cardWidth = 300;
 let index = 0;
 
 document.getElementById("rightBtn").addEventListener("click", function(){
@@ -123,6 +123,30 @@ document.getElementById("leftBtn").addEventListener("click", function(){
     carousel.style.transform = `translateX(${-index * cardWidth}px)`;
 
     console.log(index)
-})
+});
+
+
+
+
+renderCarousel = function () {
+    const productCard = document.createElement("div");
+    const productImage = document.createElement("img")
+    const productButton = document.createElement("button")
+
+    carousel.appendChild(productCard);
+    productCard.appendChild(productImage);
+    productCard.appendChild(productButton);
+}
+
+
+products.forEach(productImage => {
+    productImage.src = products.firstImage
+});
+
+for(let i = 0; i < 6; i++){
+    renderCarousel
+}
+
+
 
 

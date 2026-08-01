@@ -106,7 +106,6 @@ function renderProductDetail() {
     const paymentLogos = document.createElement("div");
 
     // Materials
-    // Materials
     const materials = document.createElement("div");
     const materialsHeading = document.createElement("h3");
     const materialsList = document.createElement("ul");
@@ -182,235 +181,230 @@ function renderProductDetail() {
     paymentMethods.className = "payment-methods";
     paymentLogos.className = "payment-logos";
 
+    materials.className = "materials"; // FIX: this was missing — without it, none of the .materials CSS applied
+
+
+    category.textContent = "Men & Fashion";
+    productRating.textContent = "4.9 ★★★★★ (257)";
+
+    //! Badge
 
     badgeImage.src = product.badge;
     badgeImage.alt = product.name;
+
+    //! Colorways — swatches + click-to-swap + default state
 
     product.colorWays.forEach(colorWay => {
         const colorWayDiv = document.createElement("div");
         const colorWayImg = document.createElement("img");
 
         colorWayImg.src = colorWay.firstImage;
-
         colorWayImg.alt = colorWay.name;
-        colorWayDiv.className = "color-way"
+        colorWayDiv.className = "color-way";
 
-        colorWaysWrapper.appendChild(colorWayDiv)
-        colorWayDiv.appendChild(colorWayImg)
+        colorWaysWrapper.appendChild(colorWayDiv);
+        colorWayDiv.appendChild(colorWayImg);
 
-        
-        colorWayDiv.addEventListener("click", function(){
-            colorName.textContent = colorWay.name
+        colorWayDiv.addEventListener("click", function () {
+            colorName.textContent = colorWay.name;
 
-            image1Element.src = colorWay.firstImage
-            image2Element.src = colorWay.secondImage
-            image3Element.src = colorWay.thirdImage
-            image4Element.src = colorWay.fourthImage
+            image1Element.src = colorWay.firstImage;
+            image2Element.src = colorWay.secondImage;
+            image3Element.src = colorWay.thirdImage;
+            image4Element.src = colorWay.fourthImage;
 
-            descriptionImage.src = colorWay.thirdImage
-        })
+            descriptionImage.src = colorWay.thirdImage;
+        });
     });
 
-        image1Element.src = product.colorWays[0].firstImage
-        image2Element.src = product.colorWays[0].secondImage
-        image3Element.src = product.colorWays[0].thirdImage
-        image4Element.src = product.colorWays[0].fourthImage
+    image1Element.src = product.colorWays[0].firstImage;
+    image2Element.src = product.colorWays[0].secondImage;
+    image3Element.src = product.colorWays[0].thirdImage;
+    image4Element.src = product.colorWays[0].fourthImage;
 
-        colorName.textContent = product.colorWays[0].name
-        
-        descriptionImage.src = product.colorWays[0].firstImage
+    colorName.textContent = product.colorWays[0].name;
+    descriptionImage.src = product.colorWays[0].firstImage;
 
+    //! Product summary text
 
-        productType.textContent = product.category
-        productName.textContent = product.name
-        productPrice.textContent = product.price + "£"
-        quickFact.textContent = product.quickFact
+    productType.textContent = product.category;
+    productName.textContent = product.name;
+    productPrice.textContent = product.price + "£";
+    quickFact.textContent = product.quickFact;
 
-        product.sizes.forEach(sizes => {
-            const size = document.createElement("div")
+    //! Sizes
 
-            size.textContent = sizes
-            size.className = "size"
+    product.sizes.forEach(sizes => {
+        const size = document.createElement("div");
 
-            sizeWrapper.appendChild(size)
-        })
-        
+        size.textContent = sizes;
+        size.className = "size";
 
-        sizeLabel.textContent = "Sizes"
-        sizeGuide.textContent = "Size-guide"
+        sizeWrapper.appendChild(size);
+    });
 
-        const sizeTipSpan = document.createElement("span")
-        const sizeTipP = document.createElement("p")
-        
-        sizeTipSpan.textContent = "🛈 Regular fit."
+    sizeLabel.textContent = "Sizes";
+    sizeGuide.textContent = "Size-guide";
 
-        sizeTipP.appendChild(sizeTipSpan)
-        sizeTipP.appendChild(document.createTextNode(" We recommend that you order your actual size for a better fit."))
+    const sizeTipSpan = document.createElement("span");
+    const sizeTipP = document.createElement("p");
 
-        sizeTip.appendChild(sizeTipP)
+    sizeTipSpan.textContent = "🛈 Regular fit.";
 
-        buyButton.textContent = "✦ Buy Now"
-        addToCartButton.textContent = "🛒︎ Add to Cart"
+    sizeTipP.appendChild(sizeTipSpan);
+    sizeTipP.appendChild(document.createTextNode(" We recommend that you order your actual size for a better fit."));
 
-        
-        const paymentMethodsP = document.createElement("p")
+    sizeTip.appendChild(sizeTipP);
 
-        paymentMethodsP.textContent = "For payment we use"
+    buyButton.textContent = "✦ Buy Now";
+    addToCartButton.textContent = "🛒︎ Add to Cart";
 
-        paymentMethods.appendChild(paymentMethodsP)
+    //! Payment methods
 
-        const paymentImage1 = document.createElement("img")
-        const paymentImage2 = document.createElement("img")
-        const paymentImage3 = document.createElement("img")
-        const paymentImage4 = document.createElement("img")
-        const paymentImage5 = document.createElement("img")
-        const paymentImage6 = document.createElement("img")
-        const paymentImage7 = document.createElement("img")
+    const paymentMethodsP = document.createElement("p");
+    paymentMethodsP.textContent = "For payment we use";
+    paymentMethods.appendChild(paymentMethodsP);
 
-        paymentImage1.src = "https://tse2.mm.bing.net/th/id/OIP.HF17CI_Y90T9ipYHWSnFfgAAAA?rs=1&pid=ImgDetMain&o=7&rm=3"
-        paymentImage2.src = "https://tse1.mm.bing.net/th/id/OIP.RXJ2wv-doV7h3ugEpoNNRQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
-        paymentImage3.src = "https://tse3.mm.bing.net/th/id/OIP.gz8RZ8bCloIOdTPLig571QHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"
-        paymentImage4.src = "https://freepnglogo.com/images/all_img/1706195363venmo-logo-transparent.png"
-        paymentImage5.src = "https://tse2.mm.bing.net/th/id/OIP.AyI29_Ej0OeIGvQ05PR1OwHaHa?w=600&h=600&rs=1&pid=ImgDetMain&o=7&rm=3"
-        paymentImage6.src = "https://th.bing.com/th/id/R.3199df0e6d1daa6b20a55c39e60096d8?rik=DBXdYJQdMKduwA&pid=ImgRaw&r=0"
-        paymentImage7.src = "https://images.ctfassets.net/4pxjo1vaz7xk/MTY2MDY1MzUyNDU0MjI/fb71fd615b1b5cba202c3728f7f008a4/klarna-og.png"
+    const paymentImage1 = document.createElement("img");
+    const paymentImage2 = document.createElement("img");
+    const paymentImage3 = document.createElement("img");
+    const paymentImage4 = document.createElement("img");
+    const paymentImage5 = document.createElement("img");
+    const paymentImage6 = document.createElement("img");
+    const paymentImage7 = document.createElement("img");
 
-        paymentLogos.appendChild(paymentImage1)
-        paymentLogos.appendChild(paymentImage2)
-        paymentLogos.appendChild(paymentImage3)
-        paymentLogos.appendChild(paymentImage4)
-        paymentLogos.appendChild(paymentImage5)
-        paymentLogos.appendChild(paymentImage6)
-        paymentLogos.appendChild(paymentImage7)
+    paymentImage1.src = "https://tse2.mm.bing.net/th/id/OIP.HF17CI_Y90T9ipYHWSnFfgAAAA?rs=1&pid=ImgDetMain&o=7&rm=3";
+    paymentImage2.src = "https://tse1.mm.bing.net/th/id/OIP.RXJ2wv-doV7h3ugEpoNNRQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3";
+    paymentImage3.src = "https://tse3.mm.bing.net/th/id/OIP.gz8RZ8bCloIOdTPLig571QHaEK?rs=1&pid=ImgDetMain&o=7&rm=3";
+    paymentImage4.src = "https://freepnglogo.com/images/all_img/1706195363venmo-logo-transparent.png";
+    paymentImage5.src = "https://tse2.mm.bing.net/th/id/OIP.AyI29_Ej0OeIGvQ05PR1OwHaHa?w=600&h=600&rs=1&pid=ImgDetMain&o=7&rm=3";
+    paymentImage6.src = "https://th.bing.com/th/id/R.3199df0e6d1daa6b20a55c39e60096d8?rik=DBXdYJQdMKduwA&pid=ImgRaw&r=0";
+    paymentImage7.src = "https://images.ctfassets.net/4pxjo1vaz7xk/MTY2MDY1MzUyNDU0MjI/fb71fd615b1b5cba202c3728f7f008a4/klarna-og.png";
 
-        
-        //! Materials — textContent + forEach
+    paymentLogos.appendChild(paymentImage1);
+    paymentLogos.appendChild(paymentImage2);
+    paymentLogos.appendChild(paymentImage3);
+    paymentLogos.appendChild(paymentImage4);
+    paymentLogos.appendChild(paymentImage5);
+    paymentLogos.appendChild(paymentImage6);
+    paymentLogos.appendChild(paymentImage7);
 
-        materialsHeading.textContent = "Materials"
+    //! Materials
 
-        product.materials.forEach(material => {
-            
+    materialsHeading.textContent = "Materials";
 
-            const materialLi = document.createElement("li");
-            const materialStrong = document.createElement("strong");
+    product.materials.forEach(material => {
+        const materialLi = document.createElement("li");
+        const materialStrong = document.createElement("strong");
 
-            materialStrong.textContent = material.part + ":";
+        materialStrong.textContent = material.part + ":";
 
-            materialLi.appendChild(materialStrong);
-            materialLi.appendChild(document.createTextNode(" " + material.material));
+        materialLi.appendChild(materialStrong);
+        materialLi.appendChild(document.createTextNode(" " + material.material));
 
-            materialsList.appendChild(materialLi);
-        });
+        materialsList.appendChild(materialLi);
+    });
 
-        descriptionChevron.textContent = "⌄"
-        descriptionTitle.textContent = "Description"
+    //! Description panel text
 
-        descriptionParagraph1.textContent = product.description[0];
-        descriptionParagraph2.textContent = product.description[1];
-        descriptionParagraph3.textContent = product.description[2];
+    descriptionChevron.textContent = "⌄";
+    descriptionTitle.textContent = "Description";
 
-        shippingChevron.textContent = "⌄"
-        shippingTitle.textContent = "Shipping & Returns"
+    descriptionHeading.textContent = product.descriptionHeader;
+    descriptionParagraph1.textContent = product.description[0];
+    descriptionParagraph2.textContent = product.description[1];
+    descriptionParagraph3.textContent = product.description[2];
 
-        shippingParagraph1.textContent = shippingInfo.returns;
-        shippingParagraph2.textContent = shippingInfo.delivery;
+    //! Shipping panel text
 
-        featuresChevron.textContent = "⌄"
-        featuresTitle.textContent = "Features"
-        featuresHeading.textContent = "Features"
-        
+    shippingChevron.textContent = "⌄";
+    shippingTitle.textContent = "Shipping & Returns";
 
-        product.features.forEach((features) => {
-            const featuresLi = document.createElement("li")
-            featuresLi.textContent = features
-            featuresList.appendChild(featuresLi)
-        })
+    shippingParagraph1.textContent = shippingInfo.returns;
+    shippingParagraph2.textContent = shippingInfo.delivery;
 
+    //! Features
 
-        similarItemsHeading.textContent = "Find Similar Items"
-        similarItemsText.textContent = "Get help finding similar items. Check it out!"
+    featuresChevron.textContent = "⌄";
+    featuresTitle.textContent = "Features";
+    featuresHeading.textContent = "Features";
 
-        similarItemsPictures
-        
-        const similarProducts = products.filter(p => (p.category === product.category || p.brand === product.brand) && p.id !== product.id);
-        
-        const randomIndex = Math.floor(Math.random() * similarProducts.length);
-        const randomProduct = similarProducts[randomIndex];
+    product.features.forEach((features) => {
+        const featuresLi = document.createElement("li");
+        featuresLi.textContent = features;
+        featuresList.appendChild(featuresLi);
+    });
 
-        const chosenProducts = [];
+    //! Similar items — filtered by brand/category, randomized, no duplicates
 
-        for (let i = 0; i < 3; i++) {
+    similarItemsHeading.textContent = "Find Similar Items";
+    similarItemsText.textContent = "Get help finding similar items. Check it out!";
+
+    const similarProducts = products.filter(p =>
+        (p.category === product.category || p.brand === product.brand) && p.id !== product.id
+    );
+
+    const chosenProducts = [];
+    const pickCount = Math.min(3, similarProducts.length);
+
+    for (let i = 0; i < pickCount; i++) {
         const randomI = Math.floor(Math.random() * similarProducts.length);
         chosenProducts.push(similarProducts[randomI]);
+        similarProducts.splice(randomI, 1);
+    }
 
-        similarProducts.splice(randomI, 1)
-        }
+    chosenProducts.forEach((similar) => {
+        const similarImage = document.createElement("img");
 
-        chosenProducts.forEach((similar) => {
-            const similarImage = document.createElement("img")
-            
-            similarImage.src = similar.firstImage
-            similarImage.alt = similar.name
+        similarImage.src = similar.firstImage;
+        similarImage.alt = similar.name;
 
-            similarItemsPictures.appendChild(similarImage)
-        })
+        similarItemsPictures.appendChild(similarImage);
+    });
 
-        const fitFact = document.createElement("div");
-        const fitTitle = document.createElement("span");
-        const fitValue = document.createElement("span");
-        fitFact.className = "fact";
-        fitTitle.className = "fact-title";
-        fitValue.className = "fact-value";
-        fitTitle.textContent = "Fit";
-        fitValue.textContent = product.productOccasion[0];
+    sizeLabel.style.marginBottom = "10px"
+    colorName.style.marginTop = "0px"
 
-        const designedForFact = document.createElement("div");
-        const designedForTitle = document.createElement("span");
-        const designedForValue = document.createElement("span");
+    //! Product facts — Fit / Designed For / Activity
 
-        designedForFact.className = "fact";
-        designedForTitle.className = "fact-title";
-        designedForValue.className = "fact-value";
-        designedForTitle.textContent = "Designed For";
-        designedForValue.textContent = product.productOccasion[1];
+    const fitFact = document.createElement("div");
+    const fitTitle = document.createElement("span");
+    const fitValue = document.createElement("span");
+    fitFact.className = "fact";
+    fitTitle.className = "fact-title";
+    fitValue.className = "fact-value";
+    fitTitle.textContent = "Fit";
+    fitValue.textContent = product.productOccasion[0];
 
-        const activityFact = document.createElement("div");
-        const activityTitle = document.createElement("span");
-        const activityValue = document.createElement("span");
-        
-        activityFact.className = "fact";
-        activityTitle.className = "fact-title";
-        activityValue.className = "fact-value";
-        activityTitle.textContent = "Activity";
-        activityValue.textContent = product.productOccasion[2];
+    const designedForFact = document.createElement("div");
+    const designedForTitle = document.createElement("span");
+    const designedForValue = document.createElement("span");
+    designedForFact.className = "fact";
+    designedForTitle.className = "fact-title";
+    designedForValue.className = "fact-value";
+    designedForTitle.textContent = "Designed For";
+    designedForValue.textContent = product.productOccasion[1];
 
-        productFactSection.appendChild(fitFact);
-        fitFact.appendChild(fitTitle);
-        fitFact.appendChild(fitValue);
+    const activityFact = document.createElement("div");
+    const activityTitle = document.createElement("span");
+    const activityValue = document.createElement("span");
+    activityFact.className = "fact";
+    activityTitle.className = "fact-title";
+    activityValue.className = "fact-value";
+    activityTitle.textContent = "Activity";
+    activityValue.textContent = product.productOccasion[2];
 
-        productFactSection.appendChild(designedForFact);
-        designedForFact.appendChild(designedForTitle);
-        designedForFact.appendChild(designedForValue);
+    productFactSection.appendChild(fitFact);
+    fitFact.appendChild(fitTitle);
+    fitFact.appendChild(fitValue);
 
-        productFactSection.appendChild(activityFact);
-        activityFact.appendChild(activityTitle);
-        activityFact.appendChild(activityValue);
-            
-        
-        
+    productFactSection.appendChild(designedForFact);
+    designedForFact.appendChild(designedForTitle);
+    designedForFact.appendChild(designedForValue);
 
-        
-    //! YOUR CODE HERE: descriptionHeading / descriptionParagraph1-3 textContent
-
-
-    //! YOUR CODE HERE: shipping paragraph textContent
-
-
-    //! YOUR CODE HERE: features.forEach loop (build <li>, append to featuresList)
-
-
-    //! YOUR CODE HERE: similar items, product facts, you might like, sizes,
-    //! materials.forEach loop, category/type/rating/name/price/facts textContent
+    productFactSection.appendChild(activityFact);
+    activityFact.appendChild(activityTitle);
+    activityFact.appendChild(activityValue);
 
 
     //! appendChild — parent.appendChild(child)
@@ -505,8 +499,6 @@ function renderProductDetail() {
     descriptionSection.appendChild(materials);
     materials.appendChild(materialsHeading);
     materials.appendChild(materialsList);
-    
-
 }
 
 renderProductDetail();
